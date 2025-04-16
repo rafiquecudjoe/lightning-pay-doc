@@ -36,13 +36,10 @@ X-API-Key: pk_test_12345abcdef
 1. **Register Partner Account** - create a partner account
 3. **Login** - Get bearer token for authenticated requests
 4. **Create Application** - Set up an application using bearer token
-5. **Generate API Key** - Create an API key for your application with the applicationReferneceId
+5. **Generate API Key** - Create an API key for your application with the application reference id
 6. **Use API Key** - Use the API key for invoice operations
 
 ## Security Best Practices
 
 - Use environment variables for sensitive credentials
 - Rotate API keys periodically
-- Use IP whitelisting when possible
-- Implement proper error handling for authentication failures
-- Never expose your credentials in client-side code

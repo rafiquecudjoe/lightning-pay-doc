@@ -5,7 +5,7 @@ sidebar_label: Webhooks
 ---
 # Webhook Reference
 
-Webhooks allow your application to receive real-time notifications about events that occur in your account. This guide explains how to set up and use webhooks.
+Webhooks allow your application to receive real-time notifications about events that occur on your account. This guide explains how to set up and use webhooks.
 
 ## Overview
 
@@ -15,7 +15,7 @@ Webhooks are HTTP callbacks that are triggered when specific events occur in our
 
 To set up a webhook:
 
-1. Use the ***Subscribe to webhooks for an application***  to add a valid webhook url and webhook secret
+1. Use the subscribe to webhooks for an application endpoint to add a valid webhook url and webhook secret
 
 
 ## Webhook Events
@@ -50,4 +50,4 @@ Each webhook request contains a JSON payload with information about the event th
 
 ## Security
 
-For security purposes, all webhook requests are signed with a signature that you can use to verify that the request came from our servers.
+For security purposes, all webhook requests are signed with a signature that can used to verify the authenticity of the event..

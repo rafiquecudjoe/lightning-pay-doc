@@ -8,7 +8,7 @@ sidebar_label: Receiving Bitcoin (Lightning)
 
 ## Receiving lightning payments
 
-You might want to build an application that allows people to receive tips via lightning, receive bitcoin payments via lightning or give your users the ability to receive instant payments. The Lightning Pay makes this a very easy integration for you.
+You might want to build an application that allows people to receive tips via lightning, receive bitcoin payments via lightning or give your users the ability to receive instant payments.Lightning Pay makes this an easy integration for you.
 
 In order to receive lightning payments, you need to create a lightning invoice. The invoice follows the BOLT11 protocol and contains a segwit address for receiving on-chain payments.
 

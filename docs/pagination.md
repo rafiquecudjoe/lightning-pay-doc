@@ -8,18 +8,10 @@ sidebar_label: Pagination
 
 All GET endpoints that return an object list support pagination.
 
-## Syntax
-
-| Parameter | Description |
-|-----------|-------------|
-| `limit` | Number of results on the current page. Defaults to 10 items |
-| `offset` | Number of results on the current page. Defaults to 10 items |
-| `totalCount` | Total number of results. |
-
 
 ## Arguments
 
 | Parameter | Description |
 |-----------|-------------|
-| `limit` | (optional) Number of results per request. Accepted values: 1 - 50. Default 10 |
-| `offset` | (optional) Number of items to skip.
+| `page` | (optional) The page you want to retrieve |
+| `size` | (optional) Number of items to retrieve

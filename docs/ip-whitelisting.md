@@ -11,7 +11,7 @@ There are many ways a system can be compromised, and one major way is getting ac
 
 ## Adding IP Addresses
 
-When creating an API key, you can add the **whitelistedIpAddresses** which is a list of IP addresses allowed to use this API key.
+When creating an API key in production, it is mandatory to provide a list IP addresses allowed to use this API key. On sandbox environment, this is optional.
 
 
 

@@ -41,8 +41,8 @@ After downloading the collection:
 
 Here's a quick guide to get started:
 
-1. Register a new partner account using the "Partner register" request
-2. A defaul application is created for you when you signup.
+1. Register a new partner account using the partner registration endpoint
+2. A defaut application is created for you when you sign up.
 4. Generate an API key with the "Create API key" request with the Bearer token from signup or login page and also use the applicationReferenceId from the signup endpoint
 5. Create a Lightning invoice using the "Create invoice" request by passing the API key in your request headers
 
