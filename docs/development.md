@@ -10,7 +10,7 @@ Development on Ejara Lightning Pay sandbox API
 
 ## Ejara Community
 
-To make integrations easier, you can join our [Slack community](#)
+To make integrations easier, you can join our [Slack community](https://join.slack.com/share/enQtODc0OTgyNDU3MjY0Ny1jNjlkYTM1ZDY3MGU3M2MyOTg0NzQ5NWM4N2VhNWNkZjM2MzFkMWFjN2JjZDIwZDkwZWVkODdjM2JkNWYzZDZk)
 
 ## Lightning Pay Sandbox API ⚙️
 
