@@ -1,0 +1,27 @@
+{
+  "id": "authentication",
+  "title": "Authentication",
+  "description": "All requests to the Ejara Lightning Pay API must be authenticated. There are multiple authentication methods available depending on the endpoint you're accessing.",
+  "source": "@site/docs/authentication.md",
+  "sourceDirName": ".",
+  "slug": "/authentication",
+  "permalink": "/docs/authentication",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "authentication",
+    "title": "Authentication",
+    "sidebar_label": "Authentication"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Development Mode",
+    "permalink": "/docs/dev"
+  },
+  "next": {
+    "title": "Errors",
+    "permalink": "/docs/errors"
+  }
+}

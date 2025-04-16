@@ -1,0 +1,27 @@
+{
+  "id": "rate-limiting",
+  "title": "Rate Limiting",
+  "description": "To prevent abuse and protect our services and customers, we have placed a maximum rate limit on requests. When the rate limit has been exceeded, a 429 Error will be thrown.",
+  "source": "@site/docs/rate-limiting.md",
+  "sourceDirName": ".",
+  "slug": "/rate-limiting",
+  "permalink": "/docs/rate-limiting",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "rate-limiting",
+    "title": "Rate Limiting",
+    "sidebar_label": "Rate Limiting"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "IP Whitelisting",
+    "permalink": "/docs/ip-whitelisting"
+  },
+  "next": {
+    "title": "Pagination",
+    "permalink": "/docs/pagination"
+  }
+}

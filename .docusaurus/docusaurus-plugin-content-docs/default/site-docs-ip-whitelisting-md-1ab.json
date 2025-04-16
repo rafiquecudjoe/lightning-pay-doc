@@ -1,0 +1,27 @@
+{
+  "id": "ip-whitelisting",
+  "title": "IP Whitelisting",
+  "description": "There are many ways a system can be compromised, and one major way is getting access to your API keys and making requests on your behalf. To prevent that, you can whitelist the IP address(es) of the server(s) your services are running on.",
+  "source": "@site/docs/ip-whitelisting.md",
+  "sourceDirName": ".",
+  "slug": "/ip-whitelisting",
+  "permalink": "/docs/ip-whitelisting",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "ip-whitelisting",
+    "title": "IP Whitelisting",
+    "sidebar_label": "IP Whitelisting"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Webhooks",
+    "permalink": "/docs/webhook"
+  },
+  "next": {
+    "title": "Rate Limiting",
+    "permalink": "/docs/rate-limiting"
+  }
+}

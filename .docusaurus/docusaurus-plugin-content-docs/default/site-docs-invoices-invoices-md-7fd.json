@@ -1,0 +1,27 @@
+{
+  "id": "invoices/invoices",
+  "title": "Invoices",
+  "description": "The Invoices API allows you to create and manage Lightning Network invoices for Bitcoin payments.",
+  "source": "@site/docs/invoices/invoices.md",
+  "sourceDirName": "invoices",
+  "slug": "/invoices/",
+  "permalink": "/docs/invoices/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "invoices",
+    "title": "Invoices",
+    "sidebar_label": "Invoices"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Applications",
+    "permalink": "/docs/applications/"
+  },
+  "next": {
+    "title": "Partner API",
+    "permalink": "/docs/partners/"
+  }
+}

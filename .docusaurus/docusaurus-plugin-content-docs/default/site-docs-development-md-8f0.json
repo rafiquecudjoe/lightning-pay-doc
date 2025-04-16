@@ -1,0 +1,27 @@
+{
+  "id": "dev",
+  "title": "Development Mode",
+  "description": "Development on Ejara Lightning Pay sandbox API",
+  "source": "@site/docs/development.md",
+  "sourceDirName": ".",
+  "slug": "/dev",
+  "permalink": "/docs/dev",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "dev",
+    "title": "Development Mode",
+    "sidebar_label": "Development Mode"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/intro"
+  },
+  "next": {
+    "title": "Authentication",
+    "permalink": "/docs/authentication"
+  }
+}

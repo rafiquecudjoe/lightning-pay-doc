@@ -1,0 +1,95 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: rgb(135, 88, 255);
+  --ifm-color-primary-dark: rgb(121, 74, 240);
+  --ifm-color-primary-darker: rgb(114, 65, 235);
+  --ifm-color-primary-darkest: rgb(95, 45, 218);
+  --ifm-color-primary-light: rgb(149, 102, 255);
+  --ifm-color-primary-lighter: rgb(156, 112, 255);
+  --ifm-color-primary-lightest: rgb(177, 143, 255);
+  --ifm-code-font-size: 95%;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: rgb(156, 112, 255);
+  --ifm-color-primary-dark: rgb(135, 88, 255);
+  --ifm-color-primary-darker: rgb(121, 74, 240);
+  --ifm-color-primary-darkest: rgb(95, 45, 218);
+  --ifm-color-primary-light: rgb(177, 143, 255);
+  --ifm-color-primary-lighter: rgb(191, 162, 255);
+  --ifm-color-primary-lightest: rgb(212, 192, 255);
+}
+
+/* Custom styling for RedocTheme */
+.redoc-wrap {
+  font-family: var(--ifm-font-family-base);
+}
+
+.api-info h1 {
+  color: var(--ifm-color-primary);
+}
+
+/* Make Redoc look consistent with overall theme */
+.redoc-wrap .menu-content {
+  background-color: var(--ifm-background-color);
+}
+
+[data-theme='dark'] .redoc-wrap .menu-content {
+  background-color: var(--ifm-background-color);
+}
+
+/* API methods styling */
+.redoc-wrap .operation-type {
+  border-radius: var(--ifm-global-radius);
+}
+
+/* Download button styling */
+.redoc-wrap .api-info a[download] {
+  border: 1px solid rgb(135, 88, 255);
+  color: rgb(135, 88, 255);
+}
+
+/* Download button styling for dark mode */
+[data-theme='dark'] .redoc-wrap .api-info a[download] {
+  border: 1px solid rgb(135, 88, 255);
+  color: rgb(135, 88, 255);
+}
+
+/* Additional Documentation link styling */
+.redoc-wrap .sc-jyynfN a,
+.redoc-wrap .api-info a[href*="lightning-pay.com/support"],
+.redoc-wrap .api-info a[href*="docs.lightning-pay.com"] {
+  color: rgb(135, 88, 255);
+  font-weight: 500;
+}
+
+/* Additional Documentation link styling for hover state */
+.redoc-wrap .sc-jyynfN a:hover,
+.redoc-wrap .api-info a[href*="lightning-pay.com/support"]:hover,
+.redoc-wrap .api-info a[href*="docs.lightning-pay.com"]:hover {
+  color: rgb(149, 102, 255);
+  text-decoration: underline;
+}
+
+/* Support email link styling */
+.redoc-wrap a[href^="mailto:support@lightning-pay.com"],
+a[href^="mailto:support@lightning-pay.com"] {
+  color: rgb(135, 88, 255);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Support email link hover state */
+.redoc-wrap a[href^="mailto:support@lightning-pay.com"]:hover,
+a[href^="mailto:support@lightning-pay.com"]:hover {
+  color: rgb(149, 102, 255);
+  text-decoration: underline;
+}
