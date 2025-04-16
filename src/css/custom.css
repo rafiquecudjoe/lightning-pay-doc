@@ -64,23 +64,23 @@
 
 /* Additional Documentation link styling */
 .redoc-wrap .sc-jyynfN a,
-.redoc-wrap .api-info a[href*="lightning-pay.com/support"],
-.redoc-wrap .api-info a[href*="docs.lightning-pay.com"] {
+.redoc-wrap .api-info a[href*="ejara.io"],
+.redoc-wrap .api-info a[href*="ejara.io"] {
   color: rgb(135, 88, 255);
   font-weight: 500;
 }
 
 /* Additional Documentation link styling for hover state */
 .redoc-wrap .sc-jyynfN a:hover,
-.redoc-wrap .api-info a[href*="lightning-pay.com/support"]:hover,
-.redoc-wrap .api-info a[href*="docs.lightning-pay.com"]:hover {
+.redoc-wrap .api-info a[href*="ejara.io"]:hover,
+.redoc-wrap .api-info a[href*="ejara.io"]:hover {
   color: rgb(149, 102, 255);
   text-decoration: underline;
 }
 
 /* Support email link styling */
-.redoc-wrap a[href^="mailto:support@lightning-pay.com"],
-a[href^="mailto:support@lightning-pay.com"] {
+.redoc-wrap a[href^="mailto:lnsupport@ejara.africa"],
+a[href^="mailto:lnsupport@ejara.africa"] {
   color: rgb(135, 88, 255);
   font-weight: 500;
   text-decoration: none;
@@ -88,8 +88,8 @@ a[href^="mailto:support@lightning-pay.com"] {
 }
 
 /* Support email link hover state */
-.redoc-wrap a[href^="mailto:support@lightning-pay.com"]:hover,
-a[href^="mailto:support@lightning-pay.com"]:hover {
+.redoc-wrap a[href^="mailto:lnsupport@ejara.africa"]:hover,
+a[href^="mailto:lnsupport@ejara.africa"]:hover {
   color: rgb(149, 102, 255);
   text-decoration: underline;
 }
