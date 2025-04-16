@@ -50,4 +50,4 @@ Each webhook request contains a JSON payload with information about the event th
 
 ## Security
 
-For security purposes, all webhook requests are signed with a signature that can used to verify the authenticity of the event..
+For security purposes, all webhook requests are signed with a signature that can used to verify the authenticity of the event.
