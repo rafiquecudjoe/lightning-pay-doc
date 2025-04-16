@@ -8,11 +8,12 @@ sidebar_label: IP Whitelisting
 
 There are many ways a system can be compromised, and one major way is getting access to your API keys and making requests on your behalf. To prevent that, you can whitelist the IP address(es) of the server(s) your services are running on.
 
-To get started, visit the Dashboard Settings
 
 ## Adding IP Addresses
 
-To add an IP Address, click on the `Add IP Address` button. Adding an IP address secludes other requests made from other IP addresses, even those belonging to you.
+When creating an API key, you can add the **whitelistedIpAddresses** which is a list of IP addresses allowed to use this API key.
+
+
 
 ## Benefits of IP Whitelisting
 

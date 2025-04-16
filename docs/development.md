@@ -18,7 +18,6 @@ To make integrations much easier, the API has a sandbox version that can be used
 
 The sandbox version allows you to build on the testnet of Bitcoin and Lightning
 
-To [sign up](#) on the sandbox to get started with development
 
 ## Testnet and Signet
 
@@ -28,8 +27,8 @@ without spending actual bitcoins.
 
 ### Sandbox Transactions
 
-Lightning invoice and Onchain Address generated during development can be paid on [testnet faucet](#) and
-[Bitcoin faucet](#) respectively.
+Lightning invoice and Onchain Address generated during development can be paid on testnet and
+Bitcoin faucetrespectively.
 
 ## Getting Started
 

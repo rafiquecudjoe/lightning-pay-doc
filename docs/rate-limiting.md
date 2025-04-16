@@ -12,11 +12,6 @@ To prevent abuse and protect our services and customers, we have placed a maximu
 
 API requests are rate-limited to ensure fair usage. The current rate limit is set to 100 requests per 2 minutes.
 
-You can check the response headers for rate limit information:
-
-- `X-RateLimit-Limit`: The maximum number of requests you're permitted to make per hour
-- `X-RateLimit-Remaining`: The number of requests remaining in the current rate limit window
-- `X-RateLimit-Reset`: The time at which the current rate limit window resets in UTC epoch seconds
 
 ## Best Practices
 

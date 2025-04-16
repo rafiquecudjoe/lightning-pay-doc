@@ -486,7 +486,7 @@ paths:
       summary: Update an existing application
       tags:
         - Applications
-  /api/v1/applications/webhooks:
+  /api/v1/webhook-subscriptions:
     post:
       operationId: ApplicationController_subscribeWebhook
       parameters:
@@ -516,6 +516,39 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponseWithoutData'
       summary: Subscribe to webhooks for an application
+      tags:
+        - Applications
+    put:
+      operationId: ApplicationController_updateWebhookSubscription
+      parameters:
+        - name: Authorization
+          in: header
+          description: Bearer token from signup or login endpoint
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateWebhookSubscriptionDto'
+      responses:
+        '200':
+          description: Webhook subscription updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WebhookResponseData'
+        '404':
+          description: Webhook subscription not found
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponseWithoutData'
+      summary: Update webhook subscription for an application
       tags:
         - Applications
 info:
@@ -758,8 +791,8 @@ components:
           description: >-
             Expiration time for this invoice in ISO8601 format. Defaults to 7
             days if not provided
-          example: '2025-04-20T23:59:59Z'
-          format: date-time
+          example: '2025-04-20'
+          format: date
       required:
         - satoshiAmount
         - description
@@ -1019,6 +1052,28 @@ components:
         - webhookUrl
         - webhookSecret
         - createdAt
+    UpdateWebhookSubscriptionDto:
+      type: object
+      properties:
+        applicationReferenceId:
+          type: string
+          description: The unique reference ID of the application
+          example: app_1a2b3c4d5e6f
+        webhookUrl:
+          type: string
+          description: The updated URL where webhook events will be sent
+          example: https://your-domain.com/updated-webhook/bitcoin-payments
+        subscribedEvents:
+          description: Updated list of event types to subscribe to
+          example:
+            - btc.lightning.received.success
+            - btc.lightning.received.failed
+            - btc.lightning.invoice.expired
+          type: array
+          items:
+            type: string
+      required:
+        - applicationReferenceId
 externalDocs:
   description: Additional Documentation
   url: https://docs.lightning-pay.com

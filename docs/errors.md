@@ -41,21 +41,3 @@ Here are some common error codes you might encounter:
 | 3001 | Rate limit exceeded |
 | 4001 | Invalid parameters |
 | 5001 | Internal server error |
-
-## Handling Errors
-
-Always check the HTTP status code and error message to understand what went wrong. Here's an example of handling errors in JavaScript:
-
-```javascript
-fetch('https://api.example.com/v1/users')
-  .then(response => {
-    if (!response.ok) {
-      return response.json().then(err => {
-        throw new Error(`${err.message} (Code: ${err.code})`);
-      });
-    }
-    return response.json();
-  })
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));
-```

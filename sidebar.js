@@ -4,7 +4,7 @@ const sidebars = {
     {
       type: "category",
       label: "GETTING STARTED",
-      items: ["intro", "dev"],
+      items: ["intro", "dev", "postman-collection"],
       collapsed: false,
     },
     {
@@ -17,12 +17,12 @@ const sidebars = {
       label: "DOCUMENTATION",
       items: [
         "authentication",
-        "errors",
-        "webhook",
+        "pagination",
         "ip-whitelisting",
         "rate-limiting",
-        "pagination",
         "receiving-bitcoin-lightning",
+        "webhook",
+        "errors",
       ],
       collapsed: false,
     },
