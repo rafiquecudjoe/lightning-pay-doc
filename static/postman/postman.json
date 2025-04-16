@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "0603971f-7fc1-4326-8e79-e4444266c2e2",
-		"name": "Lighting Pay Rest API",
+		"_postman_id": "eb18e97a-8cce-41b8-b37d-eee540ad1fe9",
+		"name": "Lighting Pay Rest API Sandbox Original",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "29698134"
 	},
@@ -125,23 +125,11 @@
 								"value": "keep-alive",
 								"system": true,
 								"type": "text"
-							},
-							{
-								"key": "client-key",
-								"value": "47489b69a5",
-								"type": "text",
-								"id": 0
-							},
-							{
-								"key": "client-secret",
-								"value": "d75w1tTAok$w(5rgC8b9Bdeft",
-								"type": "text",
-								"id": 1
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\":\"rafiqueacudjoe@gmail.com\",\n    \"password\":\"Flipmone123***\",\n    \"phoneNumber\":\"544413229\",\n    \"phoneNumberCountryCode\":\"233\"\n}",
+							"raw": "{\n    \"email\":\"example@gmail.com\",\n    \"password\":\"54t47t4g4g4hb4\",\n    \"phoneNumber\":\"544413229\",\n    \"phoneNumberCountryCode\":\"237\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -149,11 +137,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/api/v1/authentication/partner/register",
+							"raw": "{{testBoxUrl}}/api/v1/authentication/partner/register",
 							"host": [
-								"localhost"
+								"{{testBoxUrl}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"v1",
@@ -259,6 +246,9 @@
 				{
 					"name": "Login partner",
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -288,6 +278,19 @@
 								"type": "text"
 							},
 							{
+								"name": "content-type",
+								"sortOrder": 4,
+								"infoTitle": "This header was automatically added",
+								"info": "The Content-Type header is added to help the server identify the media type of the request body that is present in this request.\n\nUse the request body tab to control the value or to remove this header.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to body",
+								"key": "Content-Type",
+								"value": "application/json",
+								"system": true,
+								"type": "text"
+							},
+							{
 								"name": "content-length",
 								"sortOrder": 5,
 								"infoTitle": "This header was automatically added",
@@ -296,7 +299,7 @@
 								"disableEdit": true,
 								"previewSettingsLink": "Go to body",
 								"key": "Content-Length",
-								"value": "0",
+								"value": "<calculated when request is sent>",
 								"system": true,
 								"type": "text"
 							},
@@ -359,23 +362,11 @@
 								"value": "keep-alive",
 								"system": true,
 								"type": "text"
-							},
-							{
-								"key": "client-key",
-								"value": "6fe7659b89",
-								"type": "text",
-								"id": 0
-							},
-							{
-								"key": "client-secret",
-								"value": "h7TmhiG(w%x(%WCxHylya[!Xb",
-								"type": "text",
-								"id": 1
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\":\"rafiqueacudjoe@gmail.com\",\n    \"password\":\"Flipmone123***\"\n}",
+							"raw": "{\n     \"email\":\"example@gmail.com\",\n    \"password\":\"54t47t4g4g4hb4\",\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -383,11 +374,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/api/v1/authentication/login",
+							"raw": "{{testBoxUrl}}/api/v1/authentication/login",
 							"host": [
-								"localhost"
+								"{{testBoxUrl}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"v1",
@@ -501,7 +491,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJjcmVhdGVkQXQiOiIyMDI1LTA0LTE1VDExOjA2OjI3LjYzMVoiLCJjcmVhdGVkQnkiOm51bGwsInVwZGF0ZWRBdCI6IjIwMjUtMDQtMTVUMTE6MDY6MjcuNjY1WiIsInVwZGF0ZWRCeSI6bnVsbCwiZW1haWwiOiJyYWZpcXVlYWN1ZGpvZUBnbWFpbC5jb20iLCJwaG9uZU51bWJlciI6IjU0NDQxMzIyOSIsInBob25lTnVtYmVyQ291bnRyeUNvZGUiOiIyMzMiLCJ1c2VybmFtZSI6bnVsbCwiZmlyc3ROYW1lIjpudWxsLCJsYXN0TmFtZSI6bnVsbCwic3RhdHVzIjoidW5jb25maXJtZWQiLCJwcmVmZXJyZWRMYW5ndWFnZSI6bnVsbCwicm9sZUlkIjoxLCJpc0VtYWlsVmVyaWZpZWQiOm51bGwsImlzUGhvbmVWZXJpZmllZCI6bnVsbCwidGVtcG9yYXJ5QWNjZXNzVG9rZW4iOm51bGwsImFjY2Vzc1Rva2VuRXhwaXJlc0F0IjpudWxsLCJsYXN0TG9naW5BdCI6bnVsbCwicGFydG5lcklkIjoxLCJ0b2tlbktleSI6ImNiMjJmNWViLTEwZWMtNDIxZS1iYzUzLWJjYjFlNTg1Nzc4NyJ9LCJpYXQiOjE3NDQ3MTUyMjAsImV4cCI6MTc0NDgwMTYyMCwiYXVkIjoibGlnaHRpbmctcGF5IiwiaXNzIjoibGlnaHRpbmctcGF5In0.ds6sFpVaq4i9cCvdcc5I_rRHsp84TschM3H7bi_TX98",
+									"value": "{{bearerToken}}",
 									"type": "string"
 								}
 							]
@@ -517,7 +507,7 @@
 								"disableEdit": true,
 								"previewSettingsLink": "Go to authorization",
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoicmFmaXF1ZWFjdWRqb2VAZ21haWwuY29tIiwicGhvbmVOdW1iZXIiOiI1NDQ0MTMyMjkiLCJwaG9uZU51bWJlckNvdW50cnlDb2RlIjoiMjMzIiwicGFydG5lciI6eyJjb2RlIjoicGFyLTIxZGViZmIwOTE2ZjJlMzYyNjYxIn0sInJvbGUiOnsibmFtZSI6InBhcnRuZXIifSwidG9rZW5LZXkiOiIxMmEwOTc2Yi1hMDI1LTQxZTItYTk2OC04Y2JiZTc3MzExNTUifSwiaWF0IjoxNzQ0NjU3MDY5LCJleHAiOjE3NDQ3NDM0NjksImF1ZCI6ImxpZ2h0aW5nLXBheSIsImlzcyI6ImxpZ2h0aW5nLXBheSJ9.-XjEROomTv1WXxWUm_QKsnKj2LuFc8jFxY0QiBg51ds",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJjcmVhdGVkQXQiOiIyMDI1LTA0LTE1VDExOjA2OjI3LjYzMVoiLCJjcmVhdGVkQnkiOm51bGwsInVwZGF0ZWRBdCI6IjIwMjUtMDQtMTVUMTE6MDY6MjcuNjY1WiIsInVwZGF0ZWRCeSI6bnVsbCwiZW1haWwiOiJyYWZpcXVlYWN1ZGpvZUBnbWFpbC5jb20iLCJwaG9uZU51bWJlciI6IjU0NDQxMzIyOSIsInBob25lTnVtYmVyQ291bnRyeUNvZGUiOiIyMzMiLCJ1c2VybmFtZSI6bnVsbCwiZmlyc3ROYW1lIjpudWxsLCJsYXN0TmFtZSI6bnVsbCwic3RhdHVzIjoidW5jb25maXJtZWQiLCJwcmVmZXJyZWRMYW5ndWFnZSI6bnVsbCwicm9sZUlkIjoxLCJpc0VtYWlsVmVyaWZpZWQiOm51bGwsImlzUGhvbmVWZXJpZmllZCI6bnVsbCwidGVtcG9yYXJ5QWNjZXNzVG9rZW4iOm51bGwsImFjY2Vzc1Rva2VuRXhwaXJlc0F0IjpudWxsLCJsYXN0TG9naW5BdCI6bnVsbCwicGFydG5lcklkIjoxLCJ0b2tlbktleSI6ImNiMjJmNWViLTEwZWMtNDIxZS1iYzUzLWJjYjFlNTg1Nzc4NyJ9LCJpYXQiOjE3NDQ3MTUyMjAsImV4cCI6MTc0NDgwMTYyMCwiYXVkIjoibGlnaHRpbmctcGF5IiwiaXNzIjoibGlnaHRpbmctcGF5In0.ds6sFpVaq4i9cCvdcc5I_rRHsp84TschM3H7bi_TX98",
 								"system": true,
 								"auth": true,
 								"type": "text"
@@ -633,23 +623,11 @@
 								"value": "keep-alive",
 								"system": true,
 								"type": "text"
-							},
-							{
-								"key": "client-key",
-								"value": "47489b69a5",
-								"type": "text",
-								"id": 0
-							},
-							{
-								"key": "client-secret",
-								"value": "d75w1tTAok$w(5rgC8b9Bdeft",
-								"type": "text",
-								"id": 1
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"applicationReferenceId\":\"app-0a9803cb338d012287d9\"\n}",
+							"raw": "{\n    \"applicationReferenceId\":\"app-bae2a6f1866d85ff15e1dd\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -657,11 +635,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/api/v1/api-keys",
+							"raw": "{{testBoxUrl}}/api/v1/api-keys",
 							"host": [
-								"localhost"
+								"{{testBoxUrl}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"v1",
@@ -768,7 +745,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJjcmVhdGVkQXQiOiIyMDI1LTA0LTE1VDExOjA2OjI3LjYzMVoiLCJjcmVhdGVkQnkiOm51bGwsInVwZGF0ZWRBdCI6IjIwMjUtMDQtMTVUMTE6MDY6MjcuNjY1WiIsInVwZGF0ZWRCeSI6bnVsbCwiZW1haWwiOiJyYWZpcXVlYWN1ZGpvZUBnbWFpbC5jb20iLCJwaG9uZU51bWJlciI6IjU0NDQxMzIyOSIsInBob25lTnVtYmVyQ291bnRyeUNvZGUiOiIyMzMiLCJ1c2VybmFtZSI6bnVsbCwiZmlyc3ROYW1lIjpudWxsLCJsYXN0TmFtZSI6bnVsbCwic3RhdHVzIjoidW5jb25maXJtZWQiLCJwcmVmZXJyZWRMYW5ndWFnZSI6bnVsbCwicm9sZUlkIjoxLCJpc0VtYWlsVmVyaWZpZWQiOm51bGwsImlzUGhvbmVWZXJpZmllZCI6bnVsbCwidGVtcG9yYXJ5QWNjZXNzVG9rZW4iOm51bGwsImFjY2Vzc1Rva2VuRXhwaXJlc0F0IjpudWxsLCJsYXN0TG9naW5BdCI6bnVsbCwicGFydG5lcklkIjoxLCJ0b2tlbktleSI6ImNiMjJmNWViLTEwZWMtNDIxZS1iYzUzLWJjYjFlNTg1Nzc4NyJ9LCJpYXQiOjE3NDQ3MTUyMjAsImV4cCI6MTc0NDgwMTYyMCwiYXVkIjoibGlnaHRpbmctcGF5IiwiaXNzIjoibGlnaHRpbmctcGF5In0.ds6sFpVaq4i9cCvdcc5I_rRHsp84TschM3H7bi_TX98",
+									"value": "{{bearerToken}}",
 									"type": "string"
 								}
 							]
@@ -776,11 +753,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:3000/api/v1/api-keys?applicationReferenceId=app-fd7fb597c41250c99494",
+							"raw": "{{testBoxUrl}}/api/v1/api-keys?applicationReferenceId=",
 							"host": [
-								"localhost"
+								"{{testBoxUrl}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"v1",
@@ -789,7 +765,7 @@
 							"query": [
 								{
 									"key": "applicationReferenceId",
-									"value": "app-fd7fb597c41250c99494"
+									"value": ""
 								}
 							]
 						}
@@ -877,7 +853,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJjcmVhdGVkQXQiOiIyMDI1LTA0LTE1VDExOjA2OjI3LjYzMVoiLCJjcmVhdGVkQnkiOm51bGwsInVwZGF0ZWRBdCI6IjIwMjUtMDQtMTVUMTE6MDY6MjcuNjY1WiIsInVwZGF0ZWRCeSI6bnVsbCwiZW1haWwiOiJyYWZpcXVlYWN1ZGpvZUBnbWFpbC5jb20iLCJwaG9uZU51bWJlciI6IjU0NDQxMzIyOSIsInBob25lTnVtYmVyQ291bnRyeUNvZGUiOiIyMzMiLCJ1c2VybmFtZSI6bnVsbCwiZmlyc3ROYW1lIjpudWxsLCJsYXN0TmFtZSI6bnVsbCwic3RhdHVzIjoidW5jb25maXJtZWQiLCJwcmVmZXJyZWRMYW5ndWFnZSI6bnVsbCwicm9sZUlkIjoxLCJpc0VtYWlsVmVyaWZpZWQiOm51bGwsImlzUGhvbmVWZXJpZmllZCI6bnVsbCwidGVtcG9yYXJ5QWNjZXNzVG9rZW4iOm51bGwsImFjY2Vzc1Rva2VuRXhwaXJlc0F0IjpudWxsLCJsYXN0TG9naW5BdCI6bnVsbCwicGFydG5lcklkIjoxLCJ0b2tlbktleSI6ImNiMjJmNWViLTEwZWMtNDIxZS1iYzUzLWJjYjFlNTg1Nzc4NyJ9LCJpYXQiOjE3NDQ3MTUyMjAsImV4cCI6MTc0NDgwMTYyMCwiYXVkIjoibGlnaHRpbmctcGF5IiwiaXNzIjoibGlnaHRpbmctcGF5In0.ds6sFpVaq4i9cCvdcc5I_rRHsp84TschM3H7bi_TX98",
+									"value": "{{bearerToken}}",
 									"type": "string"
 								}
 							]
@@ -886,7 +862,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"applicationReferenceId\":\"app-30af7cc898d9d98a5db3\"\n}",
+							"raw": "{\n    \"applicationReferenceId\":\"app-30af7cc898d9d98a5db3ddd\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -894,13 +870,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/api/v1/api-keys/re-generate",
+							"raw": "{{testBoxUrl}}api/v1/api-keys/re-generate",
 							"host": [
-								"localhost"
+								"{{testBoxUrl}}api"
 							],
-							"port": "3000",
 							"path": [
-								"api",
 								"v1",
 								"api-keys",
 								"re-generate"
@@ -1066,6 +1040,9 @@
 				{
 					"name": "create invoice",
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -1182,7 +1159,7 @@
 							},
 							{
 								"key": "x-api-key",
-								"value": "9a9186071675f7918c3b5ce05e7c4302",
+								"value": "ee03b82fe43601d3d11045b5f061a9ef",
 								"type": "text",
 								"id": 0
 							}
@@ -1197,11 +1174,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/api/v1/invoices",
+							"raw": "{{testBoxUrl}}/api/v1/invoices",
 							"host": [
-								"localhost"
+								"{{testBoxUrl}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"v1",
@@ -1307,154 +1283,6 @@
 							"body": "{\n    \"message\": \"Successful\",\n    \"data\": {\n        \"partnerReference\": \"MyRef\",\n        \"description\": \"Test invoice\",\n        \"satoshiAmount\": 1000,\n        \"status\": \"pending\",\n        \"invoiceHash\": \"lnbt1000-mocked-099910ed694f1c939e814fd743ba329cabe54aaa713c9261453e782ea4156a887de5fd786038b104430f8dae32b38a9a1883370e6b110199dc460c29aa5c7835ab2842364f40qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq73dc90a7feec22c821d034a916b8dfefb73e863cda1911b356e416db87ab6dd9b485546503f1829b1299e443c836b800afd44c7bf7b1656f6cd299f4927c4099f256b2433719\",\n        \"btcEquivalentOfTokens\": \"0.00001\",\n        \"invoiceReference\": \"inv-be9dae1e776d5decb259\"\n    }\n}"
 						}
 					]
-				},
-				{
-					"name": "test webhook",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"name": "cache-control",
-								"sortOrder": 2,
-								"infoTitle": "We recommend using this header",
-								"info": "Postman added \"Cache-Control: no-cache\" as a precautionary measure to prevent the server from returning stale response when one makes repeated requests.\n\nYou can remove this header in the app settings or enter a new one with a different value.",
-								"allowedToToggle": false,
-								"disableEdit": true,
-								"previewSettingsLink": "Go to settings",
-								"key": "Cache-Control",
-								"value": "no-cache",
-								"system": true,
-								"type": "text"
-							},
-							{
-								"name": "postman-token",
-								"sortOrder": 3,
-								"infoTitle": "We recommend using this header",
-								"info": "The Postman-Token header appends a random UUID to every outgoing request. Postman adds this header for API developers to better debug requests sent and to ensure separate requests appear distinct to the receiving server.\n\nYou can remove this header in the app settings.",
-								"allowedToToggle": false,
-								"disableEdit": true,
-								"previewSettingsLink": "Go to settings",
-								"key": "Postman-Token",
-								"value": "<calculated when request is sent>",
-								"system": true,
-								"type": "text"
-							},
-							{
-								"name": "content-type",
-								"sortOrder": 4,
-								"infoTitle": "This header was automatically added",
-								"info": "The Content-Type header is added to help the server identify the media type of the request body that is present in this request.\n\nUse the request body tab to control the value or to remove this header.",
-								"allowedToToggle": true,
-								"disableEdit": true,
-								"previewSettingsLink": "Go to body",
-								"key": "Content-Type",
-								"value": "application/json",
-								"system": true,
-								"type": "text"
-							},
-							{
-								"name": "content-length",
-								"sortOrder": 5,
-								"infoTitle": "This header was automatically added",
-								"info": "The Content-Length header was added to indicate to the server the size of the request body that is added to this request. Server uses this value to parse the request body accurately.\n\nYou can remove the header or enter a new one with a different value.",
-								"allowedToToggle": true,
-								"disableEdit": true,
-								"previewSettingsLink": "Go to body",
-								"key": "Content-Length",
-								"value": "<calculated when request is sent>",
-								"system": true,
-								"type": "text"
-							},
-							{
-								"name": "host",
-								"sortOrder": 6,
-								"infoTitle": "We recommend using this header",
-								"info": "The Host header is added to identify the domain name for which a request is being sent to the server. This header is implicitly sent by every HTTP client.\n\nYou can remove the header or enter a new one with a different value. It is most likely that without this header, your request will return an HTTP 400 error.",
-								"allowedToToggle": true,
-								"disableEdit": true,
-								"key": "Host",
-								"value": "<calculated when request is sent>",
-								"system": true,
-								"type": "text"
-							},
-							{
-								"name": "user-agent",
-								"sortOrder": 7,
-								"infoTitle": "We recommend using this header",
-								"info": "The User-Agent header is added to help the server identify Postman as the HTTP requesting application or client.\n\nIt is recommended that this header be sent, but you can remove the header or enter a new one with a different value.",
-								"allowedToToggle": true,
-								"disableEdit": true,
-								"key": "User-Agent",
-								"value": "PostmanRuntime/7.39.1",
-								"system": true,
-								"type": "text"
-							},
-							{
-								"name": "accept",
-								"sortOrder": 8,
-								"infoTitle": "We recommend using this header",
-								"info": "The \"Accept: */*\" header is added to tell the server that Postman can understand and process all forms of response content types.\n\nIt is recommended that this header be sent, but you can remove the header or enter a new one with a different value.",
-								"allowedToToggle": true,
-								"disableEdit": true,
-								"key": "Accept",
-								"value": "*/*",
-								"system": true,
-								"type": "text"
-							},
-							{
-								"name": "accept-encoding",
-								"sortOrder": 9,
-								"infoTitle": "We recommend using this header",
-								"info": "The Accept-Encoding header is added to indicate to the server that Postman HTTP client supports a defined list of content-encoding or compression algorithms as response.\n\nYou can remove the header or enter a new one with a different value. Doing that may not accurately render the response within the app.",
-								"allowedToToggle": true,
-								"disableEdit": true,
-								"key": "Accept-Encoding",
-								"value": "gzip, deflate, br",
-								"system": true,
-								"type": "text"
-							},
-							{
-								"name": "connection",
-								"sortOrder": 10,
-								"infoTitle": "We recommend using this header",
-								"info": "Postman added the Connection header to indicate the server to keep the underlying network connection open once the current response is received. This allows Postman to reuse the same connection for faster response times in subsequent requests to the same server.\n\nYou can remove this header or enter a new one with a different value, such as `Connection: Close` to control this behaviour.",
-								"allowedToToggle": true,
-								"disableEdit": true,
-								"key": "Connection",
-								"value": "keep-alive",
-								"system": true,
-								"type": "text"
-							},
-							{
-								"key": "x-bitnob-signature",
-								"value": "abdbcc9351a9db6f8327c37450a85ffb65b0e7643cc9d3041e6b46902f720881b48392a4a223e3d0e5971f8f3285d8851ee1cc2fca7adda906455d33d8e37def",
-								"type": "text",
-								"id": 0
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"event\": \"btc.lightning.received.success\",\n    \"data\": {\n        \"id\": \"e2a87ce1-f8ef-4f0e-a1bd-2dc246f8ac0c\",\n        \"amount\": \"0.02\",\n        \"status\": \"success\",\n        \"channel\": \"lightning\",\n        \"isLnurl\": false,\n        \"lnurlTag\": null,\n        \"btcAmount\": \"0.000001\",\n        \"companyId\": \"bed1e56c-5cb5-4244-86bb-8455535c92ba\",\n        \"invoiceId\": \"273b1f8e082811f69f2fe2adbe8d42561e9cc3df6c063c9c21e8033ba586019a\",\n        \"reference\": \"36b112e1fd01\",\n        \"satAmount\": \"1000\",\n        \"spotPrice\": \"23896.47\",\n        \"description\": \"lightning money\",\n        \"lnurlComment\": null,\n        \"paymentRequest\": \"lnbt1000-mocked-0426a0b388783ad5b8b4edc713b1a295697909e91945007c134233101e8aa2d4877034fff3df177615852ca49658c4e5ebc31d79b6598b5911343542a9f9f32f434c4ec73e05qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq2312bc13a2bd94da042982c6bc654c5141e483cf46243f60ca3ba8b9a46596a6cb9f94a5521a179b44bbc7ce29c51a265426593843882328498688ae43bfacd0336373193863\",\n        \"lnurlIdentifier\": null,\n        \"lnurlIdentifierType\": null\n    }\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:3000/api/v1/webhook",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"webhook"
-							]
-						}
-					},
-					"response": []
 				}
 			]
 		},
@@ -1469,7 +1297,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJjcmVhdGVkQXQiOiIyMDI1LTA0LTE1VDExOjA2OjI3LjYzMVoiLCJjcmVhdGVkQnkiOm51bGwsInVwZGF0ZWRBdCI6IjIwMjUtMDQtMTVUMTE6MDY6MjcuNjY1WiIsInVwZGF0ZWRCeSI6bnVsbCwiZW1haWwiOiJyYWZpcXVlYWN1ZGpvZUBnbWFpbC5jb20iLCJwaG9uZU51bWJlciI6IjU0NDQxMzIyOSIsInBob25lTnVtYmVyQ291bnRyeUNvZGUiOiIyMzMiLCJ1c2VybmFtZSI6bnVsbCwiZmlyc3ROYW1lIjpudWxsLCJsYXN0TmFtZSI6bnVsbCwic3RhdHVzIjoidW5jb25maXJtZWQiLCJwcmVmZXJyZWRMYW5ndWFnZSI6bnVsbCwicm9sZUlkIjoxLCJpc0VtYWlsVmVyaWZpZWQiOm51bGwsImlzUGhvbmVWZXJpZmllZCI6bnVsbCwidGVtcG9yYXJ5QWNjZXNzVG9rZW4iOm51bGwsImFjY2Vzc1Rva2VuRXhwaXJlc0F0IjpudWxsLCJsYXN0TG9naW5BdCI6bnVsbCwicGFydG5lcklkIjoxLCJ0b2tlbktleSI6ImNiMjJmNWViLTEwZWMtNDIxZS1iYzUzLWJjYjFlNTg1Nzc4NyJ9LCJpYXQiOjE3NDQ3MTUyMjAsImV4cCI6MTc0NDgwMTYyMCwiYXVkIjoibGlnaHRpbmctcGF5IiwiaXNzIjoibGlnaHRpbmctcGF5In0.ds6sFpVaq4i9cCvdcc5I_rRHsp84TschM3H7bi_TX98",
+									"value": "{{bearerToken}}",
 									"type": "string"
 								}
 							]
@@ -1605,7 +1433,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\":\"Test app\",\n    \"description\":\"Test invoice\",\n    \"environment\":\"production\"\n    \n}",
+							"raw": "{\n    \"name\":\"Test app\",\n    \"description\":\"Test invoice\",\n    \"environment\":\"sandbox\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1613,11 +1441,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/api/v1/applications",
+							"raw": "{{testBoxUrl}}/api/v1/applications",
 							"host": [
-								"localhost"
+								"{{testBoxUrl}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"v1",
@@ -1727,12 +1554,33 @@
 				},
 				{
 					"name": "get all applications",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
+							{
+								"name": "authorization",
+								"sortOrder": 0,
+								"infoTitle": "This header was automatically added",
+								"info": "This header is added because of the authorization method used for this request.\n\nThe value of this header is tentative. You can find the exact value in the console once the request is sent.\n\nUse the authorization tab to remove authorization or to change the value of this header.",
+								"allowedToToggle": false,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to authorization",
+								"key": "Authorization",
+								"value": "Bearer {{bearerToken}}",
+								"system": true,
+								"auth": true,
+								"type": "text"
+							},
 							{
 								"name": "cache-control",
 								"sortOrder": 2,
@@ -1844,29 +1692,13 @@
 								"value": "keep-alive",
 								"system": true,
 								"type": "text"
-							},
-							{
-								"key": "x-api-key",
-								"value": "59db02119922ed5f91e193c432d3f546",
-								"type": "text",
-								"id": 0
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\":\"Test app\",\n    \"description\":\"Test invoice\",\n    \"environment\":\"production\"\n    \n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "localhost:3000/api/v1/applications",
+							"raw": "{{testBoxUrl}}/api/v1/applications",
 							"host": [
-								"localhost"
+								"{{testBoxUrl}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"v1",
@@ -1976,6 +1808,16 @@
 				{
 					"name": "get application by reference",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -2063,39 +1905,17 @@
 								"value": "keep-alive",
 								"system": true,
 								"type": "text"
-							},
-							{
-								"key": "x-api-key",
-								"value": "59db02119922ed5f91e193c432d3f546",
-								"type": "text",
-								"id": 0
-							},
-							{
-								"key": "client-key",
-								"value": "6fe7659b89",
-								"type": "text",
-								"id": 1,
-								"disabled": true
-							},
-							{
-								"key": "client-secret",
-								"value": "h7TmhiG(w%x(%WCxHylya[!Xb",
-								"type": "text",
-								"id": 2,
-								"disabled": true
 							}
 						],
 						"url": {
-							"raw": "localhost:3000/api/v1/applications/app-30af7cc898d9d98a5db3",
+							"raw": "{{testBoxUrl}}api/v1/applications/app-30af7cc898d9d98a5db3nn",
 							"host": [
-								"localhost"
+								"{{testBoxUrl}}api"
 							],
-							"port": "3000",
 							"path": [
-								"api",
 								"v1",
 								"applications",
-								"app-30af7cc898d9d98a5db3"
+								"app-30af7cc898d9d98a5db3nn"
 							]
 						}
 					},
@@ -2193,6 +2013,16 @@
 				{
 					"name": "update application",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [
 							{
@@ -2306,31 +2136,11 @@
 								"value": "keep-alive",
 								"system": true,
 								"type": "text"
-							},
-							{
-								"key": "x-api-key",
-								"value": "59db02119922ed5f91e193c432d3f546",
-								"type": "text",
-								"id": 0
-							},
-							{
-								"key": "client-key",
-								"value": "6fe7659b89",
-								"type": "text",
-								"id": 1,
-								"disabled": true
-							},
-							{
-								"key": "client-secret",
-								"value": "h7TmhiG(w%x(%WCxHylya[!Xb",
-								"type": "text",
-								"id": 2,
-								"disabled": true
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\":\"Updated appication\",\n    \"description\":\"Updated description\",\n    \"environment\":\"production\"\n    \n}",
+							"raw": "{\n    \"name\":\"Updated appication\",\n    \"description\":\"Updated description\",\n    \"environment\":\"sandbox\"\n    \n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2338,11 +2148,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/api/v1/applications/app-30af7cc898d9d98a5db3",
+							"raw": "{{testBoxUrl}}/api/v1/applications/app-30af7cc898d9d98a5db3",
 							"host": [
-								"localhost"
+								"{{testBoxUrl}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"v1",
@@ -2589,11 +2398,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/api/v1/webhook-subscriptions",
+							"raw": "{{testBoxUrl}}/api/v1/webhook-subscriptions",
 							"host": [
-								"localhost"
+								"{{testBoxUrl}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"v1",
@@ -2688,7 +2496,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJjcmVhdGVkQXQiOiIyMDI1LTA0LTE1VDExOjA2OjI3LjYzMVoiLCJjcmVhdGVkQnkiOm51bGwsInVwZGF0ZWRBdCI6IjIwMjUtMDQtMTVUMTE6MDY6MjcuNjY1WiIsInVwZGF0ZWRCeSI6bnVsbCwiZW1haWwiOiJyYWZpcXVlYWN1ZGpvZUBnbWFpbC5jb20iLCJwaG9uZU51bWJlciI6IjU0NDQxMzIyOSIsInBob25lTnVtYmVyQ291bnRyeUNvZGUiOiIyMzMiLCJ1c2VybmFtZSI6bnVsbCwiZmlyc3ROYW1lIjpudWxsLCJsYXN0TmFtZSI6bnVsbCwic3RhdHVzIjoidW5jb25maXJtZWQiLCJwcmVmZXJyZWRMYW5ndWFnZSI6bnVsbCwicm9sZUlkIjoxLCJpc0VtYWlsVmVyaWZpZWQiOm51bGwsImlzUGhvbmVWZXJpZmllZCI6bnVsbCwidGVtcG9yYXJ5QWNjZXNzVG9rZW4iOm51bGwsImFjY2Vzc1Rva2VuRXhwaXJlc0F0IjpudWxsLCJsYXN0TG9naW5BdCI6bnVsbCwicGFydG5lcklkIjoxLCJ0b2tlbktleSI6IjQwZGY4NWI5LWI4OTAtNGJjNC04MWM5LWI0MDE4ZTRmOGZjMCJ9LCJpYXQiOjE3NDQ3ODg3NjIsImV4cCI6MTc0NDg3NTE2MiwiYXVkIjoibGlnaHRpbmctcGF5IiwiaXNzIjoibGlnaHRpbmctcGF5In0.wUzSYJzsq0r8cPMeGvOzMiHGMu3RMaX9zPL6sXwBFNc",
+									"value": "{{bearerToken}}",
 									"type": "string"
 								}
 							]
@@ -2810,7 +2618,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "\n{  \n  \"applicationReferenceId\": \"app-fd7fb597c41250c99494\",\n  \"webhookUrl\": \"https://462f-41-66-227-40.ngrok-free.app/webhook\",\n  \"subscribedEvents\": [\"btc.lightning.invoice.expired\"]\n  }\n\n",
+							"raw": "\n{  \n  \"applicationReferenceId\": \"app-fd7fb597c41250c99494hh\",\n  \"webhookUrl\": \"https://462f-41-66-227-40.ngrok-free.app/webhook\",\n  \"subscribedEvents\": [\"btc.lightning.invoice.expired\"]\n  }\n\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2818,11 +2626,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/api/v1/webhook-subscriptions",
+							"raw": "{{testBoxUrl}}/api/v1/webhook-subscriptions",
 							"host": [
-								"localhost"
+								"{{testBoxUrl}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"v1",
@@ -2917,6 +2724,9 @@
 				{
 					"name": "get balance",
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -2941,32 +2751,6 @@
 								"disableEdit": true,
 								"previewSettingsLink": "Go to settings",
 								"key": "Postman-Token",
-								"value": "<calculated when request is sent>",
-								"system": true,
-								"type": "text"
-							},
-							{
-								"name": "content-type",
-								"sortOrder": 4,
-								"infoTitle": "This header was automatically added",
-								"info": "The Content-Type header is added to help the server identify the media type of the request body that is present in this request.\n\nUse the request body tab to control the value or to remove this header.",
-								"allowedToToggle": true,
-								"disableEdit": true,
-								"previewSettingsLink": "Go to body",
-								"key": "Content-Type",
-								"value": "application/json",
-								"system": true,
-								"type": "text"
-							},
-							{
-								"name": "content-length",
-								"sortOrder": 5,
-								"infoTitle": "This header was automatically added",
-								"info": "The Content-Length header was added to indicate to the server the size of the request body that is added to this request. Server uses this value to parse the request body accurately.\n\nYou can remove the header or enter a new one with a different value.",
-								"allowedToToggle": true,
-								"disableEdit": true,
-								"previewSettingsLink": "Go to body",
-								"key": "Content-Length",
 								"value": "<calculated when request is sent>",
 								"system": true,
 								"type": "text"
@@ -3033,17 +2817,16 @@
 							},
 							{
 								"key": "x-api-key",
-								"value": "9a9186071675f7918c3b5ce05e7c4302",
+								"value": "ee03b82fe43601d3d11045b5f061a9ef",
 								"type": "text",
 								"id": 0
 							}
 						],
 						"url": {
-							"raw": "localhost:3000/api/v1/partners/balance",
+							"raw": "{{testBoxUrl}}/api/v1/partners/balance",
 							"host": [
-								"localhost"
+								"{{testBoxUrl}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"v1",
@@ -3135,6 +2918,9 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3225,7 +3011,7 @@
 							},
 							{
 								"key": "x-api-key",
-								"value": "9a9186071675f7918c3b5ce05e7c4302",
+								"value": "ee03b82fe43601d3d11045b5f061a9ef",
 								"type": "text",
 								"id": 0
 							}
@@ -3240,11 +3026,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/api/v1/partners/invoices",
+							"raw": "{{testBoxUrl}}/api/v1/partners/invoices",
 							"host": [
-								"localhost"
+								"{{testBoxUrl}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"v1",
@@ -3338,8 +3123,255 @@
 							"body": "{\n    \"message\": \"Successful\",\n    \"data\": {\n        \"invoices\": [\n            {\n                \"invoiceReferenceId\": \"inv-4cc7a36540a0bc483b71\",\n                \"description\": \"Test invoice\",\n                \"invoiceHash\": \"lnbt1000-mocked-0426a0b388783ad5b8b4edc713b1a295697909e91945007c134233101e8aa2d4877034fff3df177615852ca49658c4e5ebc31d79b6598b5911343542a9f9f32f434c4ec73e05qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq2312bc13a2bd94da042982c6bc654c5141e483cf46243f60ca3ba8b9a46596a6cb9f94a5521a179b44bbc7ce29c51a265426593843882328498688ae43bfacd0336373193863\",\n                \"reference\": \"My reference\",\n                \"expiryDate\": \"2025-04-22T12:20:40.000Z\",\n                \"status\": \"completed\",\n                \"amount\": 1000,\n                \"btcEquivalent\": \"0.00001\",\n                \"dateCreated\": \"2025-04-15T12:20:43.936Z\"\n            }\n        ],\n        \"totalCount\": 1\n    }\n}"
 						}
 					]
+				},
+				{
+					"name": "get invoices status",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"name": "cache-control",
+								"sortOrder": 2,
+								"infoTitle": "We recommend using this header",
+								"info": "Postman added \"Cache-Control: no-cache\" as a precautionary measure to prevent the server from returning stale response when one makes repeated requests.\n\nYou can remove this header in the app settings or enter a new one with a different value.",
+								"allowedToToggle": false,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to settings",
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "postman-token",
+								"sortOrder": 3,
+								"infoTitle": "We recommend using this header",
+								"info": "The Postman-Token header appends a random UUID to every outgoing request. Postman adds this header for API developers to better debug requests sent and to ensure separate requests appear distinct to the receiving server.\n\nYou can remove this header in the app settings.",
+								"allowedToToggle": false,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to settings",
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "host",
+								"sortOrder": 6,
+								"infoTitle": "We recommend using this header",
+								"info": "The Host header is added to identify the domain name for which a request is being sent to the server. This header is implicitly sent by every HTTP client.\n\nYou can remove the header or enter a new one with a different value. It is most likely that without this header, your request will return an HTTP 400 error.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "user-agent",
+								"sortOrder": 7,
+								"infoTitle": "We recommend using this header",
+								"info": "The User-Agent header is added to help the server identify Postman as the HTTP requesting application or client.\n\nIt is recommended that this header be sent, but you can remove the header or enter a new one with a different value.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "accept",
+								"sortOrder": 8,
+								"infoTitle": "We recommend using this header",
+								"info": "The \"Accept: */*\" header is added to tell the server that Postman can understand and process all forms of response content types.\n\nIt is recommended that this header be sent, but you can remove the header or enter a new one with a different value.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Accept",
+								"value": "*/*",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "accept-encoding",
+								"sortOrder": 9,
+								"infoTitle": "We recommend using this header",
+								"info": "The Accept-Encoding header is added to indicate to the server that Postman HTTP client supports a defined list of content-encoding or compression algorithms as response.\n\nYou can remove the header or enter a new one with a different value. Doing that may not accurately render the response within the app.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "connection",
+								"sortOrder": 10,
+								"infoTitle": "We recommend using this header",
+								"info": "Postman added the Connection header to indicate the server to keep the underlying network connection open once the current response is received. This allows Postman to reuse the same connection for faster response times in subsequent requests to the same server.\n\nYou can remove this header or enter a new one with a different value, such as `Connection: Close` to control this behaviour.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Connection",
+								"value": "keep-alive",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "",
+								"type": "text",
+								"id": 0
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{testBoxUrl}}/api/v1/partners/invoices/inv-3a3dd7768fe452226db3",
+							"host": [
+								"{{testBoxUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"partners",
+								"invoices",
+								"inv-3a3dd7768fe452226db3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get invoices",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "9a9186071675f7918c3b5ce05e7c4302",
+										"type": "text",
+										"id": 0
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/v1/partners/invoices",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"partners",
+										"invoices"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"type": "text"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"type": "text"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "Content-Length",
+									"value": "658",
+									"type": "text"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"292-SYCqemfGFybNVNNpoRXMfoqHbtc\"",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 12:45:55 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successful\",\n    \"data\": {\n        \"invoices\": [\n            {\n                \"invoiceReferenceId\": \"inv-4cc7a36540a0bc483b71\",\n                \"description\": \"Test invoice\",\n                \"invoiceHash\": \"lnbt1000-mocked-0426a0b388783ad5b8b4edc713b1a295697909e91945007c134233101e8aa2d4877034fff3df177615852ca49658c4e5ebc31d79b6598b5911343542a9f9f32f434c4ec73e05qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq2312bc13a2bd94da042982c6bc654c5141e483cf46243f60ca3ba8b9a46596a6cb9f94a5521a179b44bbc7ce29c51a265426593843882328498688ae43bfacd0336373193863\",\n                \"reference\": \"My reference\",\n                \"expiryDate\": \"2025-04-22T12:20:40.000Z\",\n                \"status\": \"completed\",\n                \"amount\": 1000,\n                \"btcEquivalent\": \"0.00001\",\n                \"dateCreated\": \"2025-04-15T12:20:43.936Z\"\n            }\n        ],\n        \"totalCount\": 1\n    }\n}"
+						}
+					]
 				}
 			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "testBoxUrl",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "bearerToken",
+			"value": "",
+			"type": "string"
 		}
 	]
 }
