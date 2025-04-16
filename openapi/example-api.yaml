@@ -557,8 +557,9 @@ info:
   version: '1.0'
   contact:
     name: Lightning Pay Support
-    url: https://lightning-pay.com/support
-    email: support@lightning-pay.com
+    url: https://ejara.io
+    email: lnsupport@ejara.africa
+
 tags:
   - name: Authentication
     description: Authentication endpoints
