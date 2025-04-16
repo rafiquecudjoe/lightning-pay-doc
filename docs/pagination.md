@@ -13,5 +13,5 @@ All GET endpoints that return an object list support pagination.
 
 | Parameter | Description |
 |-----------|-------------|
-| `page` | (optional) The page you want to retrieve |
-| `size` | (optional) Number of items to retrieve
+| `page` | (optional) The page you want to retrieve . Defualt is 1|
+| `size` | (optional) Number of items to retrieve. Default 10 |
