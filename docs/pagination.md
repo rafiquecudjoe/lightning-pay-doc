@@ -16,7 +16,7 @@ All GET endpoints that return an object list comes with a meta object with pagin
 | `total` | Total number of records available|
 | `totalPages` | Total number of pages based on size |
 | `page` | The current page|
-| `totalPages` | Total pages available |
+| `size` | Items per page |
 
 
 
