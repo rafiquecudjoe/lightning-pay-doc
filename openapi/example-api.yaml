@@ -214,7 +214,6 @@ paths:
                     example: An unexpected error occurred
       security:
         - x-api-key: []
-        - bearer: []
       summary: Create a new Lightning Network invoice
       tags:
         - Invoices
@@ -274,6 +273,13 @@ paths:
           schema:
             example: app_1a2b3c4d5e6f
             type: string
+        - name: X-API-Key
+          in: header
+          description: API key for application identification
+          required: true
+          schema:
+            type: string
+            example: pk_test_123abc456def
       responses:
         '200':
           description: List of invoices retrieved successfully
@@ -287,6 +293,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponseWithoutData'
+      security:
+        - x-api-key: []
       summary: Retrieve all invoices for a partner
       tags:
         - Partner
@@ -299,6 +307,13 @@ paths:
           in: path
           schema:
             type: string
+        - name: X-API-Key
+          in: header
+          description: API key for application identification
+          required: true
+          schema:
+            type: string
+            example: pk_test_123abc456def
       responses:
         '200':
           description: Invoice status retrieved successfully
@@ -312,13 +327,22 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponseWithoutData'
+      security:
+        - x-api-key: []
       summary: Get the status of a specific invoice
       tags:
         - Partner
   /api/v1/partners/balance:
     get:
       operationId: PartnerController_getBalance
-      parameters: []
+      parameters:
+        - name: X-API-Key
+          in: header
+          description: API key for application identification
+          required: true
+          schema:
+            type: string
+            example: pk_test_123abc456def
       responses:
         '200':
           description: Balance retrieved successfully
@@ -332,95 +356,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponseWithoutData'
+      security:
+        - x-api-key: []
       summary: Get the current balance for the partner application
-      tags:
-        - Partner
-  /api/v1/partners/{partnerReferenceId}/fee-policy:
-    patch:
-      operationId: PartnerController_assignFeePolicy
-      parameters:
-        - name: partnerReferenceId
-          required: true
-          in: path
-          description: The reference ID of the partner
-          schema:
-            type: string
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/AssignFeePolicyDto'
-      responses:
-        '200':
-          description: Fee policy assigned successfully
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PartnerFeePolicyResponse'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponseWithoutData'
-      security:
-        - bearer: []
-      summary: Assign a fee policy to a partner
-      tags:
-        - Partner
-    get:
-      operationId: PartnerController_getPartnerFeePolicy
-      parameters:
-        - name: partnerReferenceId
-          required: true
-          in: path
-          description: The reference ID of the partner
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Fee policy retrieved successfully
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PartnerFeePolicyResponse'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponseWithoutData'
-      security:
-        - bearer: []
-      summary: Get the fee policy assigned to a partner
-      tags:
-        - Partner
-    delete:
-      operationId: PartnerController_removeFeePolicy
-      parameters:
-        - name: partnerReferenceId
-          required: true
-          in: path
-          description: The reference ID of the partner
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Fee policy removed successfully
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PartnerFeePolicyResponse'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponseWithoutData'
-      security:
-        - bearer: []
-      summary: Remove a fee policy from a partner
       tags:
         - Partner
   /api/v1/applications:
@@ -973,6 +911,9 @@ components:
                 status: pending
                 amount: 1000
                 btcEquivalent: '0.00001'
+                ejaraFee: 10
+                partnerCommission: 10
+                totalFee: 20
                 createdAt: '2025-04-17T06:03:56.725Z'
               - invoiceReferenceId: inv-154135d066120372aa2b
                 description: Test invoice
@@ -983,6 +924,9 @@ components:
                 status: pending
                 amount: 1000
                 btcEquivalent: '0.00001'
+                ejaraFee: 10
+                partnerCommission: 10
+                totalFee: 20
                 createdAt: '2025-04-17T06:03:56.725Z'
             meta:
               total: 2
@@ -1012,6 +956,9 @@ components:
             status: pending
             amount: 1000
             btcEquivalent: '0.00001'
+            ejaraFee: 10
+            partnerCommission: 10
+            totalFee: 20
             createdAt: '2025-04-17T06:03:56.725Z'
           nullable: true
       required:
@@ -1027,31 +974,9 @@ components:
           type: object
           description: Response data
           example:
-            btcEquivalent: '0.00150000'
-            totalBalance: 150000
-          nullable: true
-      required:
-        - message
-    AssignFeePolicyDto:
-      type: object
-      properties:
-        feePolicyReferenceId:
-          type: string
-          description: The reference ID of the fee policy to assign to the partner
-          example: fee_1a2b3c4d5e6f
-      required:
-        - feePolicyReferenceId
-    PartnerFeePolicyResponse:
-      type: object
-      properties:
-        message:
-          type: string
-          description: Response message
-          example: Successful
-        data:
-          type: object
-          description: Response data
-          example: {}
+            totalSatoshiBalance: 1000
+            totalSatoshiCommisions: 10
+            btcEquivalent: '0.00001'
           nullable: true
       required:
         - message
@@ -1167,18 +1092,9 @@ components:
           items:
             type: array
           type: array
-        meta:
-          type: object
-          description: Meta information for pagination
-          example:
-            total: 42
-            page: 1
-            size: 10
-            totalPages: 5
       required:
         - message
         - data
-        - meta
     UpdateApplicationDto:
       type: object
       properties:
