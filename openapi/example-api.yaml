@@ -785,16 +785,17 @@ components:
       properties:
         amount:
           type: number
-          minimum: 100
           description: Amount to be paid
           example: 50000
+          minimum: 100
           format: int64
         amountCurrency:
           type: string
-          minimum: 100
-          description: The currency of the amount. Defaults to SATs
+          description: >-
+            The currency of the amount.Only SATs is supported in this version.
+            Defaults to SATs
           example: SATs
-          format: int64
+          maxLength: 10
         description:
           type: string
           description: Description of the invoice that will be shown to the payer
