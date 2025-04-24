@@ -625,9 +625,9 @@ components:
       properties:
         email:
           type: string
-          format: email
           description: User email address
           example: user@example.com
+          format: email
         password:
           type: string
           description: >-
@@ -637,14 +637,12 @@ components:
           minLength: 8
         phoneNumber:
           type: string
-          pattern: /^[0-9]+$/
           description: User phone number (digits only)
           example: '1234567890'
         phoneNumberCountryCode:
           type: string
-          pattern: /^\+[0-9]+$/
           description: Country code for phone number
-          example: '+1'
+          example: '1'
       required:
         - email
         - password
@@ -696,9 +694,9 @@ components:
       properties:
         email:
           type: string
-          format: email
           description: User email address
           example: user@example.com
+          format: email
         password:
           type: string
           description: User password
@@ -785,11 +783,17 @@ components:
     CreateInvoiceDto:
       type: object
       properties:
-        satoshiAmount:
+        amount:
           type: number
-          minimum: 1000
-          description: Amount to be paid in satoshis
+          minimum: 100
+          description: Amount to be paid
           example: 50000
+          format: int64
+        amountCurrency:
+          type: string
+          minimum: 100
+          description: The currency of the amount. Defaults to SATs
+          example: SATs
           format: int64
         description:
           type: string
@@ -809,7 +813,7 @@ components:
           example: '2025-04-20'
           format: date
       required:
-        - satoshiAmount
+        - amount
         - description
     InvoiceData:
       type: object
@@ -839,6 +843,10 @@ components:
           type: number
           description: Original invoice amount in satoshi (before fees)
           example: 50000
+        amountCurrency:
+          type: string
+          description: Currency of the amount
+          example: SATs
         totalAmountWithFees:
           type: number
           description: Total amount with fees in satoshi
@@ -872,6 +880,7 @@ components:
         - description
         - status
         - amount
+        - amountCurrency
         - totalAmountWithFees
         - feeDetails
         - expiryDate
@@ -993,16 +1002,8 @@ components:
           description: Detailed description of the application
           example: Integration with our e-commerce platform to process Bitcoin payments
           maxLength: 500
-        environment:
-          type: string
-          description: Application environment
-          example: sandbox
-          enum:
-            - sandbox
-            - production
       required:
         - name
-        - environment
     CreateApplicationResponseData:
       type: object
       properties:
@@ -1116,13 +1117,6 @@ components:
             - active
             - inactive
             - deleted
-        environment:
-          type: string
-          description: Updated environment of the application
-          example: production
-          enum:
-            - sandbox
-            - production
     WebhookSubscriptionDto:
       type: object
       properties:
