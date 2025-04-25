@@ -45,10 +45,7 @@ const config = {
         id: "example-api",
         spec: path.join(__dirname, "openapi/example-api.yaml"),
         route: "/api",
-        // Theme customization should be handled differently or removed
-            options: {
-        hideDownloadButton: true
-      }
+        url: "https://lightning-pay-doc.vercel.app/openapi/spec.yaml",
       },
     ],
   ],
