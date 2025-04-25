@@ -118,6 +118,37 @@ paths:
       summary: Retrieve api key
       tags:
         - Api-keys
+    put:
+      operationId: ApiKeyController_updateApiKeyDetails
+      parameters:
+        - name: Authorization
+          in: header
+          description: Bearer token from signup or login endpoint
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateApiKeyDto'
+      responses:
+        '200':
+          description: API key details updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiKeyResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponseWithoutData'
+      summary: Update API key details
+      tags:
+        - Api-keys
   /api/v1/api-keys/re-generate:
     post:
       operationId: ApiKeyController_updateApiKey
@@ -147,7 +178,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponseWithoutData'
-      summary: Update an existing API key
+      summary: Regenerate an apiKey
       tags:
         - Api-keys
   /api/v1/invoices:
@@ -778,6 +809,27 @@ components:
           type: string
           description: The unique reference ID of the application
           example: app_1a2b3c4d5e6f
+      required:
+        - applicationReferenceId
+    UpdateApiKeyDto:
+      type: object
+      properties:
+        applicationReferenceId:
+          type: string
+          description: The ID of the API key to update
+          example: 5f9d5a5b-5b5a-4b5a-8b5a-5b5a4b5a8b5a
+        description:
+          type: string
+          description: Description of the API key
+          example: This API key is used for payment processing on our mobile app
+        whitelistedIpAddresses:
+          description: List of IP addresses allowed to use this API key
+          example:
+            - 192.168.1.1
+            - 10.0.0.1
+          type: array
+          items:
+            type: string
       required:
         - applicationReferenceId
     CreateInvoiceDto:
